@@ -9,6 +9,7 @@ import { DialogboxComponent } from '../dialogbox/dialogbox.component';
   template: `
     <div style="margin:20px; margin-bottom: 100px;">
     <button style="margin-bottom: 10px;" mat-button (click)="openDialog('Add', {})" mat-flat-button color="primary">Add</button>   
+    <input autofocus style="float: right;" placeholder="Type to search ..." [(ngModel)]="searchText" (keyup)="search()">
     <div>
       <ngx-datatable
         #mydatatable
@@ -130,12 +131,16 @@ import { DialogboxComponent } from '../dialogbox/dialogbox.component';
 export class DataTableComponent {
   editing: any = {};
   rows: any = [];
-
+  searchText: string = "";
   ColumnMode = ColumnMode;
 
   constructor(private dataService: DataService, public dialog: MatDialog) {
+    this.getData();
+  }
+
+  getData(){
     this.dataService.getData().subscribe((result: any) => {
-      this.rows = result;
+      this.rows = [...result];
     });
   }
 
@@ -174,4 +179,18 @@ export class DataTableComponent {
   save(){
     this.rows = [...this.rows];
   }
+
+  search(){
+    if(this.searchText) {
+      this.rows = this.rows.filter((item: any) => {
+        if(item.name.includes(this.searchText) || item.username.includes(this.searchText)
+        || item.email.includes(this.searchText) || item.phone.includes(this.searchText) || item.website.includes(this.searchText)){
+          return item;
+        } 
+      });
+    } else {
+      this.getData();
+    }
+  }
+    
 }
