@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row" style="margin: 20px 0 50px 0;">
+    <div style="margin-bottom: 20px;" class="col-xl-4" *ngFor="let item of proximaList; let index = index">
+      <mat-card  [style.background-color] = "index % 2 === 0  ? 'yellow' : 'blue'">
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.username}}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{item.email}}</p>
+          <p>{{item.phone}}</p>
+          <p>{{item.website}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
