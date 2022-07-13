@@ -27,6 +27,8 @@
 
 ### _Please note that this exam is measuring your UI skill level as well as attention to detail when building a UI. We're looking for a clean user interface with a proper user experience._
 
+Wireframe for Reference only
 
+![Screenshot 2022-07-13 at 12-54-21 Figma](https://user-images.githubusercontent.com/56335654/178675579-c4580dd9-d019-41d4-a8b8-a5453815f009.png)
 
 
