@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\frontend",
+    "\\frontend\\angular-app",
+    "\\frontend\\angular-app\\src",
+    "\\frontend\\angular-app\\src\\app",
+    "\\frontend\\angular-app\\src\\app\\data-table"
+  ],
+  "SelectedNode": "\\frontend\\angular-app\\src\\app\\app.component.scss",
+  "PreviewInSolutionExplorer": false
+}
