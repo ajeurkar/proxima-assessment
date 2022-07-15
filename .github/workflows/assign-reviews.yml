@@ -13,5 +13,4 @@ jobs:
       - name: Auto Assign Action
         uses: kentaro-m/auto-assign-action@v1.1.2
         with:
-          repo-token: '${{ secrets.REPO_TOKEN }}'
           configuration-path: '.github/workflows/reviewers.yml'
